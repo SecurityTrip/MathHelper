@@ -5,5 +5,25 @@
         mc:Ignorable="d" d:DesignWidth="600" d:DesignHeight="450"
         x:Class="MathHelper.MainWindow"
         Title="MathHelper">
-    Welcome to Avalonia!
+	    <StackPanel Orientation="Vertical">
+            <TextBlock Text="Graph Parameters" FontSize="16" Margin="10"/>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="Function:" Margin="10"/>
+                <TextBox Name="FunctionTextBox" Margin="5" Width="200"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="X Range:" Margin="10"/>
+                <TextBox Name="XMinTextBox" Margin="5" Width="100"/>
+                <TextBlock Text="-" Margin="5"/>
+                <TextBox Name="XMaxTextBox" Margin="5" Width="100"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="Y Range:" Margin="10"/>
+                <TextBox Name="YMinTextBox" Margin="5" Width="100"/>
+                <TextBlock Text="-" Margin="5"/>
+                <TextBox Name="YMaxTextBox" Margin="5" Width="100"/>
+            </StackPanel>
+            <Button Content="Plot Graph" Margin="10" Click="OnPlotGraphButtonClick"/>
+        </StackPanel>
+	
 </Window>
